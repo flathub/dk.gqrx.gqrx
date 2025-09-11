@@ -88,6 +88,14 @@ modules:
         tag: v23.11.0
         commit: c2d9e87754586304577beff4dc5b16fb9b72c826
 
+  - name: mirisdr
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/ericek111/libmirisdr-5.git
+        # there are no new tags
+        commit: 78a874b30a4c3161251b8e12ffb6443f29005eb3
+
   - name: rtlsdr
     buildsystem: cmake-ninja
     config-opts:
