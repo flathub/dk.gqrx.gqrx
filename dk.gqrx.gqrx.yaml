@@ -99,12 +99,13 @@ modules:
   - name: rtlsdr
     buildsystem: cmake-ninja
     config-opts:
+      - -Wno-dev
       - -DDETACH_KERNEL_DRIVER=ON
     sources:
       - type: git
-        url: https://github.com/steve-m/librtlsdr.git
+        url: https://gitea.osmocom.org/sdr/rtl-sdr.git
         tag: v2.0.2
-        commit: 619ac3186ea0ffc092615e1f59f7397e5e6f668c
+        commit: ae0dd6d4f09088d13500a854091b45ad281ca4f0
 
   - name: volk
     buildsystem: cmake-ninja
