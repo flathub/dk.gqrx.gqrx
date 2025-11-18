@@ -104,7 +104,7 @@ modules:
     sources:
       - type: git
         url: https://gitea.osmocom.org/sdr/rtl-sdr.git
-        tag: v2.0.2
+        tag: master
         commit: ae0dd6d4f09088d13500a854091b45ad281ca4f0
 
   - name: volk
