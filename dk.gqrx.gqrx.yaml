@@ -1,6 +1,6 @@
 id: dk.gqrx.gqrx
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: gqrx
 rename-icon: gqrx
@@ -36,6 +36,10 @@ modules:
 
   - name: airspy
     buildsystem: cmake-ninja
+    build-options:
+      cflags: -std=gnu17
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/airspy/airspyone_host.git
@@ -44,7 +48,10 @@ modules:
 
   - name: airspyhf
     buildsystem: cmake-ninja
+    build-options:
+      cflags: -std=gnu17
     config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       - -DINSTALL_UDEV_RULES=OFF
     sources:
       - type: git
@@ -55,7 +62,9 @@ modules:
   - name: bladerf
     buildsystem: cmake-ninja
     build-options:
-      cflags: "-Wno-calloc-transposed-args"
+      cflags: -Wno-calloc-transposed-args
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/Nuand/bladeRF.git
@@ -66,6 +75,7 @@ modules:
     buildsystem: cmake-ninja
     subdir: host
     config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       - -DINSTALL_UDEV_RULE=OFF
     sources:
       - type: git
@@ -75,7 +85,10 @@ modules:
 
   - name: limesdr
     buildsystem: cmake-ninja
+    build-options:
+      cflags: -std=gnu17
     config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       - -DENABLE_QUICKTEST=OFF
       - -DENABLE_GUI=OFF
       - -DENABLE_SOAPY_LMS7=OFF
@@ -90,6 +103,8 @@ modules:
 
   - name: mirisdr
     buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/ericek111/libmirisdr-5.git
@@ -129,6 +144,7 @@ modules:
     buildsystem: cmake-ninja
     subdir: host
     config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       - -DENABLE_DOXYGEN=OFF
       - -DENABLE_MANUAL=OFF
       - -DENABLE_MAN_PAGES=OFF
@@ -143,14 +159,15 @@ modules:
         commit: 308126a479ca19dfaebfe4784b375e608788d763
       - type: patch
         paths:
+          - patches/uhd-add-missing-cstdint-includes.patch
           - patches/uhd-disable-ascii-art-dft.patch
           - patches/uhd-disable-latency-utils.patch
 
   - name: spdlog
     buildsystem: cmake-ninja
     build-options:
-      cflags: "-fPIC"
-      cxxflags: "-fPIC"
+      cflags: -fPIC
+      cxxflags: -fPIC
     sources:
       - type: git
         url: https://github.com/gabime/spdlog.git
@@ -222,6 +239,8 @@ modules:
 
   - name: soapy
     buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/pothosware/SoapySDR.git
@@ -230,6 +249,8 @@ modules:
 
   - name: soapy_remote
     buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/pothosware/SoapyRemote.git
@@ -238,6 +259,8 @@ modules:
 
   - name: soapy_uhd
     buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/pothosware/SoapyUHD.git
@@ -246,6 +269,8 @@ modules:
 
   - name: portaudio
     buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/PortAudio/portaudio.git
