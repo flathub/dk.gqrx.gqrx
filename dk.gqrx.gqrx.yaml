@@ -249,23 +249,19 @@ modules:
 
   - name: soapy_remote
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/pothosware/SoapyRemote.git
-        tag: soapy-remote-0.5.2
-        commit: f920d9bf10f62f67c8e31b7dc25090bc784e5210
+        # latest master for multiple fixes
+        commit: 40c3ef9053b63885b7444ce7e9ef00d2c7964c9d
 
   - name: soapy_uhd
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/pothosware/SoapyUHD.git
         # latest master for multiple fixes
-        commit: 6b521393cc45c66770f3d4bc69eac7dda982174c
+        commit: 2a5d381f68fd05d5b3c0e7db56c36892ea99b4ae
 
   - name: portaudio
     buildsystem: cmake-ninja
