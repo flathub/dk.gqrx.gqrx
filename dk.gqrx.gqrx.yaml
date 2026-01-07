@@ -357,6 +357,16 @@ modules:
         tag: v3.10.12.0
         commit: ec7a3239645162ffea1925e6f1e6e62bf1349d03
 
+  - name: gr-iqbal
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DENABLE_DOXYGEN=OFF
+    sources:
+      - type: git
+        url: https://gitea.osmocom.org/sdr/gr-iqbal.git
+        tag: v0.38.3
+        commit: 6782a1f934bc6c3bd293d34ab7453a85b00f4fab
+
   - name: gr-osmosdr
     buildsystem: cmake-ninja
     sources:
