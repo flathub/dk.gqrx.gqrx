@@ -205,6 +205,8 @@ modules:
         url: https://github.com/pybind/pybind11.git
         tag: v3.0.1
         commit: f5fbe867d2d26e4a0a9177a51f6e568868ad3dc8
+      - type: patch
+        path: patches/pybind11-fix-python-inc-path.patch
 
   - name: cli11
     buildsystem: cmake-ninja
@@ -356,6 +358,16 @@ modules:
         url: https://github.com/gnuradio/gnuradio.git
         tag: v3.10.12.0
         commit: ec7a3239645162ffea1925e6f1e6e62bf1349d03
+
+  - name: gr-iqbal
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DENABLE_DOXYGEN=OFF
+    sources:
+      - type: git
+        url: https://gitea.osmocom.org/sdr/gr-iqbal.git
+        tag: v0.38.3
+        commit: 6782a1f934bc6c3bd293d34ab7453a85b00f4fab
 
   - name: gr-osmosdr
     buildsystem: cmake-ninja
