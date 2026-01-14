@@ -75,13 +75,12 @@ modules:
     buildsystem: cmake-ninja
     subdir: host
     config-opts:
-      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       - -DINSTALL_UDEV_RULE=OFF
     sources:
       - type: git
         url: https://github.com/greatscottgadgets/hackrf.git
-        tag: v2024.02.1
-        commit: 18b485e3b6d2031c15a79ba89cdb42b5fa245f24
+        tag: v2026.01.1
+        commit: bdae250310faa019f69e3afa0204c083a807c69e
 
   - name: libaio
     no-autogen: true
