@@ -24,7 +24,6 @@ cleanup:
 
 modules:
   - shared-modules/linux-audio/fftw3f.json
-  - shared-modules/libusb/libusb.json
 
   - name: hidapi
     buildsystem: cmake-ninja
