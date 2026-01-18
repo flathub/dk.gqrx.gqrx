@@ -374,6 +374,8 @@ modules:
         url: https://gitea.osmocom.org/sdr/gr-osmosdr.git
         tag: v0.2.6
         commit: a6afeaa3a1038e64751616d769537cd22ace015d
+      - type: patch
+        path: patches/gr-osmosdr-airspy-multidev.patch
 
   - name: gqrx
     buildsystem: cmake-ninja
