@@ -78,8 +78,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/greatscottgadgets/hackrf.git
-        tag: v2026.01.1
-        commit: bdae250310faa019f69e3afa0204c083a807c69e
+        tag: v2026.01.2
+        commit: 85160ee735a1c9ffee1d2674f7495f16471527a6
 
   - name: libaio
     no-autogen: true
