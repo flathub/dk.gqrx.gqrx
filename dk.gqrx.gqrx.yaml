@@ -284,6 +284,14 @@ modules:
         # latest master for multiple fixes
         commit: 2a5d381f68fd05d5b3c0e7db56c36892ea99b4ae
 
+  - name: soapy_airspyhf
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/pothosware/SoapyAirspyHF.git
+        # latest master for multiple fixes
+        commit: 7457d6972d97ea6808a2774a9439501308e4c688
+
   - name: libad9361-iio
     buildsystem: cmake-ninja
     config-opts:
