@@ -190,9 +190,7 @@ modules:
         sha256: 602ee2b9806d5d9ae40a9b068e55ba084e6becea51fdbd956d1f0229d553bf44
     build-commands:
       - install -Dm644 LICENSE -t ${FLATPAK_DEST}/share/uhd/images
-      - for f in usrp_b2*; do
-          install -m644 $f -t ${FLATPAK_DEST}/share/uhd/images;
-        done
+      - for f in usrp_b2*; do install -m644 $f -t ${FLATPAK_DEST}/share/uhd/images; done
 
   - name: spdlog
     buildsystem: cmake-ninja
