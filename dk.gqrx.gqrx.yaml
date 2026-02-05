@@ -58,6 +58,14 @@ modules:
         tag: 1.6.8
         commit: 8891387edddcd185e2949e9814e9ef35f46f0722
 
+  - name: hydrasdr
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/hydrasdr/hydrasdr-host.git
+        tag: v1.0.4
+        commit: 6958c53fd27190120ea67d79502693dd1e56d78e
+
   - name: bladerf
     buildsystem: cmake-ninja
     build-options:
@@ -301,6 +309,14 @@ modules:
         url: https://github.com/pothosware/SoapyAirspyHF.git
         # latest master for multiple fixes
         commit: 7457d6972d97ea6808a2774a9439501308e4c688
+
+  - name: soapy_hydrasdr
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/hydrasdr/SoapyHydraSDR.git
+        # latest main for multiple fixes
+        commit: 77b6ae2929830e8a01a0e8efa69e44d6ac438cde
 
   - name: libad9361-iio
     buildsystem: cmake-ninja
