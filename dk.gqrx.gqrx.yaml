@@ -391,6 +391,16 @@ modules:
         tag: v3.10.12.0
         commit: ec7a3239645162ffea1925e6f1e6e62bf1349d03
 
+  - name: gr-funcube
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/dl1ksv/gr-funcube.git
+        # latest main for multiple fixes
+        commit: 932ada084b88e1ad3132bc5fee96b4401d1c6c3c
+      - type: patch
+        path: patches/gr-funcube-flatpak-prefix.patch
+
   - name: gr-iqbal
     buildsystem: cmake-ninja
     config-opts:
