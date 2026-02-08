@@ -397,9 +397,7 @@ modules:
       - type: git
         url: https://github.com/dl1ksv/gr-funcube.git
         # latest main for multiple fixes
-        commit: 932ada084b88e1ad3132bc5fee96b4401d1c6c3c
-      - type: patch
-        path: patches/gr-funcube-flatpak-prefix.patch
+        commit: 2fc05048a4a5c0be5105b2060a9daf999d8440bc
 
   - name: gr-iqbal
     buildsystem: cmake-ninja
