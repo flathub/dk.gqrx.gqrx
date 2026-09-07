@@ -144,7 +144,8 @@ modules:
       - -DDETACH_KERNEL_DRIVER=ON
     sources:
       - type: git
-        url: https://github.com/steve-m/librtlsdr.git
+        url: https://gitea.osmocom.org/sdr/rtl-sdr.git
+        tag: v2.0.3
         commit: 797f8143266d983c56d8f35d2d442527529dd8a5
 
   - name: volk
