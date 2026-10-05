@@ -336,6 +336,23 @@ modules:
         # latest master for multiple fixes
         commit: cdce23959aca536d5436e0cc689d069a8239f487
 
+  - name: jsoncpp
+    buildsystem: cmake-ninja
+    builddir: true
+    sources:
+      - type: git
+        url: https://github.com/open-source-parsers/jsoncpp.git
+        tag: 1.9.8
+        commit: 8519b8381f3c741ad1421f88237b1deda0b11412
+
+  - name: soapy_espsdr
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/ESPARGOS/SoapyESPSDR.git
+        # latest main
+        commit: 6f2cc726a61feb332e612db9c1e47bffdcb99dcd
+
   - name: portaudio
     buildsystem: cmake-ninja
     config-opts:
