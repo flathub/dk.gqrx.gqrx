@@ -136,7 +136,7 @@ modules:
       - type: git
         url: https://github.com/ericek111/libmirisdr-5.git
         # there are no new tags
-        commit: 78a874b30a4c3161251b8e12ffb6443f29005eb3
+        commit: 6392af06ba02154765ecb8d1ddc29dbe3c62b402
 
   - name: rtlsdr
     buildsystem: cmake-ninja
@@ -335,6 +335,14 @@ modules:
         url: https://github.com/pothosware/SoapyPlutoSDR.git
         # latest master for multiple fixes
         commit: cdce23959aca536d5436e0cc689d069a8239f487
+
+  - name: soapy_mirisdr
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/ericek111/SoapyMiri.git
+        # there are no tags
+        commit: 1e0a125ebab4ab492266fc61cab52600c7dc675f
 
   - name: jsoncpp
     buildsystem: cmake-ninja
