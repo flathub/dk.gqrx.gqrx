@@ -359,7 +359,7 @@ modules:
       - type: git
         url: https://github.com/ESPARGOS/SoapyESPSDR.git
         # latest main
-        commit: 6f2cc726a61feb332e612db9c1e47bffdcb99dcd
+        commit: 81fe16e89ff31601c746a99ce93b05f6a1d1a2f1
 
   - name: portaudio
     buildsystem: cmake-ninja
