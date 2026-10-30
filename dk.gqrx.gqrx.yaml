@@ -130,13 +130,11 @@ modules:
 
   - name: mirisdr
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
-        url: https://github.com/ericek111/libmirisdr-5.git
+        url: https://github.com/BertoldVdb/libmirisdr-6.git
         # there are no new tags
-        commit: 6392af06ba02154765ecb8d1ddc29dbe3c62b402
+        commit: a769141baf93eb8f6ee6525172176feba131c78c
 
   - name: rtlsdr
     buildsystem: cmake-ninja
