@@ -295,7 +295,7 @@ modules:
       - type: git
         url: https://github.com/BertoldVdb/libmirisdr-6.git
         # latest main for multiple fixes
-        commit: 10b4b5bea7457b169b36081b0094f394e9abfcee
+        commit: ee057ba30b0eb543e8ce36e4569d4a0aa71f5ee7
 
   - name: soapy_uhd
     buildsystem: cmake-ninja
