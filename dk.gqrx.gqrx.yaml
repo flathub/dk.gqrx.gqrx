@@ -299,6 +299,8 @@ modules:
 
   - name: soapy_uhd
     buildsystem: cmake-ninja
+    cleanup:
+      - /lib/uhd/modules/libsoapySupport.so
     sources:
       - type: git
         url: https://github.com/pothosware/SoapyUHD.git
