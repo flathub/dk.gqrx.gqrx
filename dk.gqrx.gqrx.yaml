@@ -281,8 +281,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pothosware/SoapyRemote.git
-        # latest master for multiple fixes
-        commit: 40c3ef9053b63885b7444ce7e9ef00d2c7964c9d
+        tag: soapy-remote-0.5.4
+        commit: bd10a2e4a916bf66f0faa36dca7f043d4268138c
 
   - name: mirisdr
     buildsystem: cmake-ninja
